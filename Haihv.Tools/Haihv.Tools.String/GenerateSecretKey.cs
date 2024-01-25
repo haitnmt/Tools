@@ -2,13 +2,15 @@
 
 namespace Haihv.Tools.String
 {
-    public class GenerateSecretKey(int length = 64)
+    public class GenerateSecretKey(int length = 64, bool includeNumber = true, bool includeSymbol = true)
     {
-        public string Result => GenerateSecret(length);
-        public static string GenerateSecret(int length = 64)
+        public string Result => GenerateSecret(length, includeNumber, includeSymbol);
+        public static string GenerateSecret(int length = 64, bool includeNumber = true, bool includeSymbol = true)
         {
             Random random = new();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#&*%-+=.$_^~<>!?";
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            if (includeNumber) chars += "0123456789";
+            if (includeSymbol) chars += "@#&*%-+=.$_^~<>!?";
             StringBuilder result = new(length);
 
             for (int i = 0; i < length; i++)

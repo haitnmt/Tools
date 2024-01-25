@@ -5,8 +5,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Copyright>hvhai.stnmt@bacninh.gov.vn | haihv.net</Copyright>
-		<AssemblyVersion>1.0.24011.2</AssemblyVersion>
-		<FileVersion>1.0.24011.2</FileVersion>
+		<AssemblyVersion>1.0.8790.0</AssemblyVersion>
+		<FileVersion>1.0.8790.0</FileVersion>
 	</PropertyGroup>
 
 </Project>
